@@ -1,0 +1,36 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form__input-wrapper">
+    <input
+      type="text"
+      class="form__input"
+      formControlName="email"
+      placeholder="Enter Email"
+    />
+    <div
+      class="form__email-error"
+      *ngIf="!email.valid && (email.touched || email.dirty || isSubmitClicked)"
+    >
+      Email is required!!!
+    </div>
+  </div>
+  <div class="form__input-wrapper">
+    <input
+      type="password"
+      class="form__input"
+      formControlName="password"
+      placeholder="Enter Password"
+    />
+    <div
+      class="form__password-error"
+      *ngIf="
+        !password.valid &&
+        (password.touched || password.dirty || isSubmitClicked)
+      "
+    >
+      Password is required!!!
+    </div>
+  </div>
+  <button class="form__button" (click)="isSubmitClicked = true">
+    {{ type | titlecase }}
+  </button>
+</form>

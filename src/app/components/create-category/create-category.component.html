@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+  <div class="form__input-wrapper">
+    <input
+      type="text"
+      class="form__input"
+      formControlName="title"
+      placeholder="Enter Category Title"
+    />
+    <div
+      class="form__error"
+      *ngIf="!title.value && (title.touched || title.dirty || isSubmitClicked)"
+    >
+      Title is required!!!
+    </div>
+  </div>
+  <button class="form__button" (click)="isSubmitClicked = true">
+    Create category
+  </button>
+</form>
