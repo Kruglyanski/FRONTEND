@@ -32,7 +32,7 @@
   <select formControlName="tag" class="form__select">
     <option *ngFor="let tag of eTagArray" [value]="tag">{{ tag }}</option>
   </select>
-  <button class="form__button" (cklick)="isSubmitClicked = true">
+  <button class="form__button" (click)="isSubmitClicked = true">
     Create todo
   </button>
 </form>
