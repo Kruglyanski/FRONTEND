@@ -1,0 +1,35 @@
+<div *ngIf="category$ | async as category" class="category">
+  <div class="category__header">
+    <div class="category__title-wrapper">
+      <div
+        *ngIf="category.todos.length"
+        class="category__open"
+        (click)="toggleCategory()"
+      >
+        <ng-container [ngSwitch]="isOpen">
+          <ng-container *ngSwitchCase="true">
+            <mat-icon fontSize="large">expand_less</mat-icon>
+          </ng-container>
+          <ng-container *ngSwitchCase="false">
+            <mat-icon fontSize="large">expand_more</mat-icon>
+          </ng-container>
+        </ng-container>
+      </div>
+      <h2 class="category__title">{{ category.title }}</h2>
+    </div>
+    <button class="category__delete-button" (click)="deleteCategory()">
+      <mat-icon class="category__delete-icon">delete_sweep</mat-icon>
+      <p>Category</p>
+    </button>
+  </div>
+  <div
+    [ngClass]="{
+    category__hidden: !isOpen,
+  }"
+  >
+    <app-todo
+      *ngFor="let todo of category.todos; trackBy: trackByFn"
+      [todo]="todo"
+    />
+  </div>
+</div>

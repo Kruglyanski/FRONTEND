@@ -1,0 +1,32 @@
+<div class="header">
+  <input
+    type="text"
+    class="header__filter"
+    placeholder="Filter todos"
+    [(ngModel)]="filterValue"
+  />
+  <button
+    *ngIf="showDeleteButton$ | async"
+    class="header__button header__remove-todos-button"
+    (click)="deleteSelectedTodos()"
+  >
+    <mat-icon class="header__remove-todos-button-icon">delete_sweep</mat-icon>
+    <p>Todos</p>
+  </button>
+  <div *ngIf="!(showDeleteButton$ | async)">
+    <button
+      *ngIf="(categoriesService.categories$ | async)?.length"
+      class="header__button"
+      (click)="modalService.show(EModalType.CREATE_TODO)"
+    >
+      + Todo
+    </button>
+    <button
+      class="header__button"
+      (click)="modalService.show(EModalType.CREATE_CATEGORY)"
+    >
+      + Category
+    </button>
+    <button class="header__button" (click)="logout()">Logout</button>
+  </div>
+</div>
