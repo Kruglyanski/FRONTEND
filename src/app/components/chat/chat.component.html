@@ -1,6 +1,6 @@
 <div class="chat">
   <ul class="chat__messages">
-    <li class="chat__message" *ngFor="let msg of messages$ | async">
+    <li *ngFor="let msg of messages$ | async" class="chat__message">
       <div [ngClass]="msg.type" class="chat__message-text">
         {{ msg.userEmail + ": " + msg.message }}
       </div>

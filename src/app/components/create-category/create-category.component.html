@@ -7,8 +7,8 @@
       placeholder="Enter Category Title"
     />
     <div
-      class="form__error"
       *ngIf="!title.value && (title.touched || title.dirty || isSubmitClicked)"
+      class="form__error"
     >
       Title is required!!!
     </div>
