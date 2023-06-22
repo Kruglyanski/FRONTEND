@@ -7,8 +7,8 @@
       placeholder="Enter Email"
     />
     <div
-      class="form__email-error"
       *ngIf="!email.valid && (email.touched || email.dirty || isSubmitClicked)"
+      class="form__email-error"
     >
       Email is required!!!
     </div>
@@ -21,11 +21,11 @@
       placeholder="Enter Password"
     />
     <div
-      class="form__password-error"
       *ngIf="
         !password.valid &&
         (password.touched || password.dirty || isSubmitClicked)
       "
+      class="form__password-error"
     >
       Password is required!!!
     </div>
