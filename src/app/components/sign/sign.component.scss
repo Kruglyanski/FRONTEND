@@ -1,11 +1,11 @@
 .form {
   &__input {
+    display: flex;
     width: 380px;
     height: 36px;
-    border-radius: 4px;
     border: 1px solid;
+    border-radius: 4px;
     font-size: 18px;
-    display: flex;
 
     &:focus {
       border: 1px solid blue;
@@ -13,26 +13,26 @@
   }
 
   &__button {
-    background-color: #086df3;
-    outline: none;
-    border-radius: 4px;
-    padding: 8px;
-    border: none;
-    font-size: 18px;
     margin-left: 6px;
     margin-top: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #086df3;
+    font-size: 18px;
+    outline: none;
   }
 
   &__email-error {
-    color: red;
     position: absolute;
     top: 82px;
+    color: red;
   }
 
   &__password-error {
-    color: red;
     position: absolute;
     top: 146px;
+    color: red;
   }
 
   &__input-wrapper {
@@ -41,7 +41,7 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    width: 388px;
     flex-direction: column;
+    width: 388px;
   }
 }

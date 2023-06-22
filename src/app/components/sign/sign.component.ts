@@ -16,7 +16,7 @@ import { EMessageType } from '../../enums/message-type';
 export class SignComponent extends BaseComponent {
   public isSubmitClicked = false;
   public form = new FormGroup({
-    email: new FormControl<string>('', [Validators.required,Validators.email]),
+    email: new FormControl<string>('', [Validators.required, Validators.email]),
     password: new FormControl<string>('', [Validators.required]),
   });
 
