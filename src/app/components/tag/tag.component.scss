@@ -1,10 +1,10 @@
 .tag {
+  padding: 2px;
   display: flex;
+  border-radius: 4px;
   text-align: center;
   font-size: 16px;
   font-weight: 700;
-  border-radius: 4px;
-  padding: 2px;
 }
 
 .tag-container {
@@ -13,16 +13,16 @@
 }
 
 .green {
-  color: rgb(0, 124, 0);
   border: rgb(0, 124, 0) solid;
+  color: rgb(0, 124, 0);
 }
 
 .orange {
-  color: rgb(226, 131, 42);
   border: rgb(226, 131, 42) solid;
+  color: rgb(226, 131, 42);
 }
 
 .red {
-  color: red;
   border: red solid;
+  color: red;
 }
