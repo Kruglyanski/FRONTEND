@@ -17,8 +17,8 @@ export class TodoComponent extends BaseComponent {
     takeUntil(this.destroy$)
   );
 
-  @Input() public set todo(category: ITodo) {
-    this.todo$.next(category);
+  @Input() public set todo(todo: ITodo) {
+    this.todo$.next(todo);
   }
 
   constructor(private todosService: TodosService) {
